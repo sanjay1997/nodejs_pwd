@@ -1,0 +1,57 @@
+<%- include('include/header') %>
+
+
+<div class="container">
+    <div class="card border border-dark" style="margin-top: 80px">
+      <div class="card-body">
+        <div class="col-sm-12">
+            <% if (messages.error) { %>
+            <p style="color:red"><%- messages.error %></p>
+            <% } %>
+            
+            <% if (messages.success) { %>
+            <p style="color:green"><%- messages.success %></p>
+            <% } %>
+
+            <form action="/addpass" method="post" class="row gy-2 gx-3 align-items-center">
+
+                <div class="col-auto">
+                  <div class="form-outline">
+                    <input type="text" name="pname" class="form-control" />
+                    <label class="form-label" for="form11Example1">Project Name</label>
+                  </div>
+                </div>
+
+                <div class="col-auto">
+                    <div class="form-outline">
+                      <input type="text" name="sitelink" class="form-control" />
+                      <label class="form-label" for="form11Example1">Site Link</label>
+                    </div>
+                </div>
+
+                <div class="col-auto">
+                  <div class="form-outline">
+                    <input type="text" name="username" class="form-control" />
+                    <label class="form-label" for="form11Example3">Username / Email</label>
+                  </div>
+                </div>
+
+                <div class="col-auto">
+                  <div class="form-outline">
+                    <input type="text" name="password" class="form-control" />
+                    <label class="form-label" for="form11Example1">Password</label>
+                  </div>
+                </div>
+
+                <div class="col-auto">
+                  <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+              </form>
+
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<%- include('include/footer') %>
